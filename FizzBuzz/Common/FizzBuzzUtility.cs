@@ -11,15 +11,15 @@
         public const string InvalidItem = "Invalid Item";
     }
 
-    public static class FizzBuzzChecker
+    public class FizzBuzzChecker : IFizzBuzzChecker
     {
-        public static bool IsFizzBuzz(int number) => number % FizzBuzzConstants.DivisorFizz == 0 && number % FizzBuzzConstants.DivisorBuzz == 0;
+        public bool IsFizzBuzz(int number) => number % FizzBuzzConstants.DivisorFizz == 0 && number % FizzBuzzConstants.DivisorBuzz == 0;
 
-        public static bool IsFizz(int number) => number % FizzBuzzConstants.DivisorFizz == 0;
+        public bool IsFizz(int number) => number % FizzBuzzConstants.DivisorFizz == 0;
 
-        public static bool IsBuzz(int number) => number % FizzBuzzConstants.DivisorBuzz == 0;
+        public bool IsBuzz(int number) => number % FizzBuzzConstants.DivisorBuzz == 0;
 
-        public static bool IsValidNumber(string input, out int number) => int.TryParse(input, out number);
+        public bool IsValidNumber(string input, out int number) => int.TryParse(input, out number);
     }
-    
+
 }

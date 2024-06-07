@@ -1,3 +1,4 @@
+using FizzBuzz.Common;
 using FizzBuzz.Services;
 using System.Text.Json.Serialization;
 
@@ -15,6 +16,7 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
     });
 builder.Services.AddScoped<IFizzBuzzService, FizzBuzzService>();
+builder.Services.AddSingleton<IFizzBuzzChecker,  FizzBuzzChecker>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

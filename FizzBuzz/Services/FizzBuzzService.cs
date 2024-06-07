@@ -4,27 +4,33 @@ namespace FizzBuzz.Services
 {
     public class FizzBuzzService : IFizzBuzzService
     {
+        private readonly IFizzBuzzChecker _fizzBuzzChecker;
+        public FizzBuzzService(IFizzBuzzChecker fizzBuzzChecker)
+        {
+                _fizzBuzzChecker = fizzBuzzChecker;
+        }
+
         public List<string> ProcessInputs(List<string> inputs)
         {
             List<string> results = new List<string>();
 
             foreach (var input in inputs)
             {
-                if (string.IsNullOrWhiteSpace(input) || !FizzBuzzChecker.IsValidNumber(input, out int number))
+                if (string.IsNullOrWhiteSpace(input) || !_fizzBuzzChecker.IsValidNumber(input, out int number))
                 {
                     results.Add(FizzBuzzConstants.InvalidItem);
                     continue;
                 }
 
-                if (FizzBuzzChecker.IsFizzBuzz(number))
+                if (_fizzBuzzChecker.IsFizzBuzz(number))
                 {
                     results.Add(FizzBuzzConstants.FizzBuzz);
                 }
-                else if (FizzBuzzChecker.IsFizz(number))
+                else if (_fizzBuzzChecker.IsFizz(number))
                 {
                     results.Add(FizzBuzzConstants.Fizz);
                 }
-                else if (FizzBuzzChecker.IsBuzz(number))
+                else if (_fizzBuzzChecker.IsBuzz(number))
                 {
                     results.Add(FizzBuzzConstants.Buzz);
                 }

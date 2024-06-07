@@ -5,6 +5,16 @@ namespace NUnit_Test_Project
     [TestFixture]
     public class FizzBuzzCheckerTests
     {
+
+        private FizzBuzzChecker _checker;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _checker = new FizzBuzzChecker();
+        }
+
+
         [Test]
         public void IsFizzBuzz_WhenNumberIsDivisibleByThreeAndFive_ReturnsTrue()
         {
@@ -12,7 +22,7 @@ namespace NUnit_Test_Project
             int number = 15;
 
             // Act
-            bool result = FizzBuzzChecker.IsFizzBuzz(number);
+            bool result = _checker.IsFizzBuzz(number);
 
             // Assert
             Assert.IsTrue(result);
@@ -23,7 +33,7 @@ namespace NUnit_Test_Project
         {
             int number = 7;
 
-            bool result = FizzBuzzChecker.IsFizzBuzz(number);
+            bool result = _checker.IsFizzBuzz(number);
 
             Assert.IsFalse(result);
         }
@@ -33,7 +43,7 @@ namespace NUnit_Test_Project
         {
             int number = 9;
 
-            bool result = FizzBuzzChecker.IsFizz(number);
+            bool result = _checker.IsFizz(number);
 
             Assert.IsTrue(result);
         }
@@ -43,7 +53,7 @@ namespace NUnit_Test_Project
         {
             int number = 8;
 
-            bool result = FizzBuzzChecker.IsFizz(number);
+            bool result = _checker.IsFizz(number);
 
             Assert.IsFalse(result);
         }
@@ -53,7 +63,7 @@ namespace NUnit_Test_Project
         {
             int number = 10;
 
-            bool result = FizzBuzzChecker.IsBuzz(number);
+            bool result = _checker.IsBuzz(number);
 
             Assert.IsTrue(result);
         }
@@ -63,7 +73,7 @@ namespace NUnit_Test_Project
         {
             int number = 11;
 
-            bool result = FizzBuzzChecker.IsBuzz(number);
+            bool result = _checker.IsBuzz(number);
 
             Assert.IsFalse(result);
         }
@@ -73,7 +83,7 @@ namespace NUnit_Test_Project
         {
             string input = "123";
 
-            bool result = FizzBuzzChecker.IsValidNumber(input, out int number);
+            bool result = _checker.IsValidNumber(input, out int number);
 
             Assert.IsTrue(result);
             Assert.AreEqual(123, number);
@@ -84,7 +94,7 @@ namespace NUnit_Test_Project
         {
             string input = "abc";
 
-            bool result = FizzBuzzChecker.IsValidNumber(input, out int number);
+            bool result = _checker.IsValidNumber(input, out int number);
 
             Assert.IsFalse(result);
         }
@@ -94,7 +104,7 @@ namespace NUnit_Test_Project
         {
             string input = "";
 
-            bool result = FizzBuzzChecker.IsValidNumber(input, out int number);
+            bool result = _checker.IsValidNumber(input, out int number);
 
             Assert.IsFalse(result);
         }
