@@ -8,7 +8,8 @@
 **output:**  
 ![image](https://github.com/Mr-Brown-Rafi/FizzBuzz/assets/61969034/912c001c-f1db-443e-834d-6a8853504e7f)  
 **step 4:** Run test cases in test explorer  
-![image](https://github.com/Mr-Brown-Rafi/FizzBuzz/assets/61969034/c2d6c039-e06e-4c4a-adc8-2c8928b3ade5)  
+![image](https://github.com/Mr-Brown-Rafi/FizzBuzz/assets/61969034/d12c7ab6-3204-4951-b094-ba3faa339d0f)
+
 
 
 **--> Terminal or command prompt**    
