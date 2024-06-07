@@ -19,7 +19,7 @@
 ```dotnet build```
   
 **Run the application**  
-```dotnet run --project CodingExercise```
+```dotnet run --project FizzBuzz```
   
 Open swagger in browser - https://localhost:7119/swagger/index.html
 
