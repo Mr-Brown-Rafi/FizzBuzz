@@ -19,7 +19,7 @@
    - Copy the repository's HTTPS or SSH URL from the "Clone" button on GitHub.
    - Run the following command in the terminal:
      ```
-     git clone [<paste-copied-url>](https://github.com/Mr-Brown-Rafi/FizzBuzz.git)
+     git clone https://github.com/Mr-Brown-Rafi/FizzBuzz.git
      ```
 
 3. **Navigate to the Project Directory:**
