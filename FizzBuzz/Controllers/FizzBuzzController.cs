@@ -1,7 +1,6 @@
 ﻿using FizzBuzz.Models;
 using FizzBuzz.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
 
 namespace FizzBuzz.Controllers
 {
@@ -17,9 +16,15 @@ namespace FizzBuzz.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] ArrayOfValues model)
+        public IActionResult Post([FromBody] InputModel model)
         {
-           var results = _fizzBuzzService.ProcessInputs(model.Values);
+
+            if (model?.Values == null)
+            {
+                return BadRequest("Input values cannot be null.");
+            }
+
+            var results = _fizzBuzzService.ProcessInputs(model.Values);
             return Ok(results);
         }
     }

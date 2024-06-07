@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzz.Models
 {
-    public class ArrayOfValues
+    public class InputModel
     {
         public List<string> Values { get; set; }
         

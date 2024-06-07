@@ -1,6 +1,4 @@
-﻿using FizzBuzz.Models;
-
-namespace FizzBuzz.Services
+﻿namespace FizzBuzz.Services
 {
     public interface IFizzBuzzService
     {

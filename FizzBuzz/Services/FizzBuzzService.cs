@@ -1,5 +1,4 @@
-﻿using FizzBuzz.Models;
-using System.Reflection;
+﻿using FizzBuzz.Common;
 
 namespace FizzBuzz.Services
 {
@@ -11,35 +10,30 @@ namespace FizzBuzz.Services
 
             foreach (var input in inputs)
             {
-                if (string.IsNullOrWhiteSpace(input))
+                if (string.IsNullOrWhiteSpace(input) || !FizzBuzzChecker.IsValidNumber(input, out int number))
                 {
-                    results.Add("Invalid Item");
+                    results.Add(FizzBuzzConstants.InvalidItem);
                     continue;
                 }
 
-                if (!int.TryParse(input, out int number))
+                if (FizzBuzzChecker.IsFizzBuzz(number))
                 {
-                    results.Add("Invalid Item");
-                    continue;
+                    results.Add(FizzBuzzConstants.FizzBuzz);
                 }
-
-                if (number % 3 == 0 && number % 5 == 0)
+                else if (FizzBuzzChecker.IsFizz(number))
                 {
-                    results.Add("FizzBuzz");
+                    results.Add(FizzBuzzConstants.Fizz);
                 }
-                else if (number % 3 == 0)
+                else if (FizzBuzzChecker.IsBuzz(number))
                 {
-                    results.Add("Fizz");
-                }
-                else if (number % 5 == 0)
-                {
-                    results.Add("Buzz");
+                    results.Add(FizzBuzzConstants.Buzz);
                 }
                 else
                 {
-                    results.Add($"Divided {number} by 3 & Divided {number} by 5");
+                    results.Add($"Divided {number} by {FizzBuzzConstants.DivisorFizz} & Divided {number} by {FizzBuzzConstants.DivisorBuzz}");
                 }
             }
+
 
             return results;
         }
