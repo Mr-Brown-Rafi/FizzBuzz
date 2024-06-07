@@ -11,26 +11,25 @@
 ![image](https://github.com/Mr-Brown-Rafi/FizzBuzz/assets/61969034/c2d6c039-e06e-4c4a-adc8-2c8928b3ade5)  
 
 
-**--> Terminal or command prompt**  
-1. **Open Terminal or Command Prompt:**
-   - Navigate to the directory where you want to clone the project.
+**--> Terminal or command prompt**    
+**clone the project to local from git repo**  
+```git clone https://github.com/Mr-Brown-Rafi/FizzBuzz.git```
+  
+**Build the application**  
+```dotnet build```
+  
+**Run the application**  
+```dotnet run --project CodingExercise```
+  
+Open swagger in browser - https://localhost:7119/swagger/index.html
 
-2. **Clone the Repository:**
-   - Copy the repository's HTTPS or SSH URL from the "Clone" button on GitHub.
-   - Run the following command in the terminal:
-     ```
-     git clone https://github.com/Mr-Brown-Rafi/FizzBuzz.git
-     ```
+provide the input
 
-3. **Navigate to the Project Directory:**
-   - Once the cloning process is finished, navigate into the newly created directory using the `cd` command. For example:
-     ```
-     cd project-directory
-     ```
-   - Replace `project-directory` with the name of the directory that was created during the cloning process.
-
-4. **Verify Successful Cloning:**
-   - You should now see all the project files and directories in your local environment.
-
+Sample Input -   
+```{  "values": ["1", "3", "5", "", "15", "A", "23"] }```
+ 
+you will get the sample output below in response  
+Sample Output -    
+```["Divided 1 by 3 & Divided 1 by 5",  "Fizz",  "Buzz",  "Invalid Item",  "FizzBuzz",  "Invalid Item",  "Divided 23 by 3 & Divided 23 by 5"]```
 
 
