@@ -1,6 +1,6 @@
 ﻿using FizzBuzz.Common;
 
-namespace NUnit_Test_Project
+namespace FizzBuzz.Tests
 {
     [TestFixture]
     public class FizzBuzzCheckerTests

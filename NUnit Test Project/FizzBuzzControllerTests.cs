@@ -4,7 +4,7 @@ using FizzBuzz.Services;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace NUnit_Test_Project
+namespace FizzBuzz.Tests
 {
     [TestFixture]
     public class FizzBuzzControllerTests
